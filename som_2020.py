@@ -41,7 +41,7 @@ bbox = pd.read_csv('./OrdemProcessamentoTiles_v0.csv').sort_values(by='ORDEMFINA
 
 bbox['NM_MACRORH'] = bbox['NM_MACRORH'].replace(' ','_', regex=True).str.lower().str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
 
-parameters = dict(access_token='JaJwS9czfdfDNQNaPumuzDhnjSmmriBobn6GpxCTpI')
+parameters = dict(access_token='Enter your BDC token')
 service = pystac_client.Client.open('https://brazildatacube.dpi.inpe.br/stac/', parameters=parameters)
 
 
